@@ -17,7 +17,8 @@
 */
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 // core components
 import Admin from "layouts/Admin.js";
@@ -32,6 +33,12 @@ ReactDOM.render(
       <Route path="/rtl" component={RTL} />
       <Redirect from="/" to="/admin/dashboard" />
     </Switch>
+    <div>
+      <MessengerCustomerChat
+        pageId="104971585166877"
+        appId="324107322422057"
+      />,
+    </div>
   </BrowserRouter>,
   document.getElementById("root")
 );
